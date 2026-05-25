@@ -1,8 +1,0 @@
-b195af657119b1e568341d6a4c04debb0c1141be a7891f67485b9f51b32df2d2c5ef90b141f72041 João Victor <joaovitordepaula002@gmail.com> 1777909431 -0300	commit: Atualizando affordance e corrigindo bugs
-a7891f67485b9f51b32df2d2c5ef90b141f72041 a866e3aa4f3a7a31ce478a0014754178dbccf34a João Victor <joaovitordepaula002@gmail.com> 1777911994 -0300	commit: fix: arrumando o relatório
-a866e3aa4f3a7a31ce478a0014754178dbccf34a 95803cda2e0a3d65ee1ae0700407caf6ee509434 João Victor <joaovitordepaula002@gmail.com> 1777912715 -0300	commit: fix: interface de perguntas mobile
-95803cda2e0a3d65ee1ae0700407caf6ee509434 f7ca6302dd3363640af8be9c663c65986fa459b6 João Victor <joaovitordepaula002@gmail.com> 1777913279 -0300	commit: fix: ajustanto botão de dicas no mobile
-f7ca6302dd3363640af8be9c663c65986fa459b6 ce3116cd092d3fd29371bcb513435cbf9676490a João Victor <joaovitordepaula002@gmail.com> 1778689256 -0300	commit: feat: Adicionando relatório e conversão em json
-ce3116cd092d3fd29371bcb513435cbf9676490a 478ef6387e5cb868b5084f8d5bf4ded9395e8837 João Victor <joaovitordepaula002@gmail.com> 1778689819 -0300	commit: docs: update README v2.0 and clean up unused tools
-478ef6387e5cb868b5084f8d5bf4ded9395e8837 d5a1b04d2f61fc01d0b04e5a0213255aaad37f6c João Victor <joaovitordepaula002@gmail.com> 1778690238 -0300	commit: feat: auto-save quiz session to report when 'Ver Relatório' is clicked
-d5a1b04d2f61fc01d0b04e5a0213255aaad37f6c 535fcbd7b946a4877009c5b9c0c7222de5b82f64 João Victor <joaovitordepaula002@gmail.com> 1779728095 -0300	commit: Rebrand to ReciclaMack: UI, results screen, reports and PDF/JSON names

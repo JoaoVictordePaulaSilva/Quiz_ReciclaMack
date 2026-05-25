@@ -1,50 +1,50 @@
-# TecnoMack - Quiz de Segurança Digital 🔐
+# ReciclaMack - Quiz sobre Reciclagem de Eletrônicos
 
-Um jogo educativo em HTML estático desenvolvido para alertar e instruir a população sobre os perigos presentes na internet e como se prevenir deles através de um quiz interativo com sistema avançado de relatórios e análise de desempenho.
+Uma aplicação educativa em HTML estático focada em conscientizar sobre o descarte correto e a reciclagem de equipamentos eletrônicos. O projeto oferece um quiz interativo com relatórios, exportação em PDF/JSON e ferramentas para acompanhar desempenho de participantes.
 
 ## 📋 Características
 
 ### Quiz
-- ✅ **Quiz Interativo**: 10 perguntas sobre segurança na internet e fake news
-- 🎨 **Design Moderno**: Interface limpa e responsiva com as cores do protótipo
+- ✅ **Quiz Interativo**: 10 perguntas sobre descarte e reciclagem de eletrônicos
+- 🎨 **Design Moderno (Tema ReciclaMack)**: Interface limpa, com paleta em tons de verde
 - 📱 **Responsivo**: Funciona em desktop, tablet e mobile
-- 💾 **Sem Backend**: Totalmente estático - pode ser hospedado em GitHub Pages
-- 🎯 **Feedback Educativo**: Cada resposta inclui uma explicação detalhada
-- 🔀 **Ordem Aleatória**: Perguntas, alternativas e níveis aparecem em ordem embaralhada a cada tentativa
+- 💾 **Sem Backend**: Totalmente estático - compatível com GitHub Pages
+- 🎯 **Feedback Educativo**: Cada resposta inclui explicação e orientação prática
+- 🔀 **Ordem Aleatória**: Perguntas e alternativas embaralhadas a cada tentativa
 - 📥 **Perguntas Dinâmicas**: O app lê `perguntas.csv` para carregar questões
 
 ### Sistema de Dicas
-- 💡 **50/50 - Eliminar 2**: Remove duas alternativas erradas
-- ⏭️ **Pular Questão**: Passa para a próxima pergunta
-- 👨‍🎓 **Universitários**: Sugestão que pode ajudar ou não
+- **50/50 - Eliminar 2**: Remove duas alternativas erradas
+- **Pular Questão**: Passa para a próxima pergunta
+- **Sugestão Temática**: Dica contextualizada para cada pergunta
 
 ### Relatórios & Analytics
-- 📊 **Relatório Integrado**: Visualize desempenho de todos os participantes
+- 📊 **Relatório Integrado**: Tela dedicada com KPIs de desempenho
 - 📈 **Gráficos Interativos**: Média de acertos e taxa de aprovação por dificuldade
-- 💾 **Exportar Relatórios**: Baixe em PDF ou JSON
-- 📥 **Importar Relatórios**: Carregue JSONs de relatórios anteriores
-- 🎯 **Comparativo por Dificuldade**: Analise desempenho por nível (Iniciante/Intermediário/Avançado)
-- 📊 **Uso de Dicas**: Rastreamento de quantas vezes cada dica foi utilizada
-- ❌ **Questões Mais Erradas**: Identifique tópicos problemáticos
-- ✅ **Taxa de Aprovação**: Acompanhe quantos atingiram 70%+
+- 💾 **Exportar Relatórios**: Baixe em PDF (jsPDF) ou JSON para análise
+- 📥 **Importar Relatórios**: Carregue JSONs previamente exportados
+- 🎯 **Comparativo por Dificuldade**: Iniciante / Intermediário / Avançado
+- 📊 **Uso de Dicas**: Monitoramento do uso das ajudas (50/50, pular, etc.)
+- ❌ **Questões com Mais Erros**: Top 5 para priorizar conteúdo
+- ✅ **Taxa de Aprovação**: Indicador de participantes com >=70%
 
 ## 🎮 Tópicos do Quiz
 
-1. **Fake News** - O que é e como identificar
-2. **Prevenção de Fake News** - Como evitar compartilhamento de informações falsas
-3. **Phishing** - Entendendo ataques de phishing
-4. **Senhas Fortes** - Como criar senhas seguras
-5. **Emails Suspeitos** - Como identificar ataques por email
-6. **WiFi Público** - Segurança em redes públicas
-7. **Privacidade em Redes Sociais** - O que compartilhar ou não
-8. **Identificação de Sites Falsos** - Como detectar phishing
-9. **Proteção contra Cyberbullying** - Como se proteger online
-10. **Atualizações de Software** - Por que são importantes
+1. **Descarte de Baterias e Pilhas** - Riscos e pontos de coleta
+2. **Apagando Dados Pessoais** - Preparar dispositivos antes do descarte
+3. **Logística Reversa** - Onde entregar aparelhos eletrônicos
+4. **Componentes Perigosos** - Manuseio seguro de componentes internos
+5. **Reuso e Doação** - Quando reparar ou doar é melhor que descartar
+6. **Separação de Materiais** - O que é reciclável e o que não é
+7. **Pontos de Coleta Locais** - Identificar serviços locais
+8. **Legislação e Responsabilidade** - Requisitos para descarte correto
+9. **Impacto Ambiental** - Por que reciclagem importa
+10. **Recuperação de Materiais** - Como ocorre a reciclagem eletrônica
 
 ## 📁 Estrutura do Projeto
 
 ```
-Projeto TecnoMack/
+Projeto ReciclaMack/
 ├── index.html                          # Arquivo principal (quiz + relatórios)
 ├── styles.css                          # Estilos CSS (cores, layouts, gráficos)
 ├── script.js                           # Lógica principal (quiz, relatórios, analytics)
@@ -63,8 +63,8 @@ Projeto TecnoMack/
 
 1. **Clone ou baixe o repositório**:
 ```bash
-git clone https://github.com/seu-usuario/Projeto-TecnoMack.git
-cd Projeto-TecnoMack
+git clone https://github.com/JoaoVictordePaulaSilva/Quiz_ReciclaMack.git
+cd Quiz_ReciclaMack
 ```
 
 2. **Abra no navegador**:
@@ -82,18 +82,16 @@ python -m http.server 8000
 ### Passo 1: Criar um repositório no GitHub
 
 1. Vá para [github.com](https://github.com) e faça login
-2. Clique em "New" para criar um novo repositório
-3. Nomeie como `Projeto-TecnoMack` (ou qualquer nome desejado)
-4. Deixe como Public
-5. Clique em "Create repository"
+2. Use o repositório `Quiz_ReciclaMack` (já criado)
+3. Verifique em Settings → Pages que a branch `main` (ou `master`) está selecionada para deployment
 
 ### Passo 2: Fazer upload dos arquivos
 
 **Opção A: Com Git (Recomendado)**
 ```bash
 # Clone o repositório (vazio)
-git clone https://github.com/seu-usuario/Projeto-TecnoMack.git
-cd Projeto-TecnoMack
+git clone https://github.com/JoaoVictordePaulaSilva/Quiz_ReciclaMack.git
+cd Quiz_ReciclaMack
 
 # Copie os arquivos para a pasta
 # (ou faça git add, commit e push dos arquivos atuais)
@@ -123,15 +121,14 @@ Aguarde alguns minutos e acesse:
 https://seu-usuario.github.io/Projeto-TecnoMack
 ```
 
-## 🎨 Paleta de Cores
+## 🎨 Paleta de Cores (ReciclaMack)
 
-- **Azul Escuro**: `#2c3e7f` - Cor primária (como no protótipo)
-- **Azul Claro**: `#5b7cc8` - Cor secundária
-- **Roxo Escuro**: `#1a2450` - Fundo alternativo
-- **Azul Claro 2**: `#6c9ef0` - Destacamentos
-- **Verde**: `#2ecc71` - Acertos/Sucesso
-- **Vermelho**: `#e74c3c` - Erros
-- **Cinza Claro**: `#ecf0f1` - Fundo
+- **Verde Escuro**: `#103d2a` - Cor primária
+- **Verde Médio**: `#2fbf71` - Cor de destaque
+- **Verde Claro**: `#7ee2a0` - Acentos e sucesso
+- **Superfície Translúcida**: `rgba(255,255,255,0.06)` - Cartões e painéis
+- **Vermelho**: `#e74c3c` - Erros/alertas
+- **Cinza Claro**: `#f5f7f6` - Fundos claros
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -216,7 +213,7 @@ https://seu-usuario.github.io/Projeto-TecnoMack
 
 ### localStorage
 - Relatórios são salvos automaticamente no `localStorage` do navegador
-- Chave utilizada: `tecnomack_reports_v1`
+- Chave utilizada: `tecnomack_reports_v1` (pode ser renomeada para `reciclamack_reports_v1` se desejar manter consistência)
 - Dados persistem enquanto o navegador não limpar o cache
 - Cada navegador/máquina tem seu próprio histórico
 
