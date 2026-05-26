@@ -116,18 +116,60 @@ function parseCsvLine(line, delimiter = ',') {
     return values;
 }
 
+function parseCsvRows(csvText, delimiter = ',') {
+    const rows = [];
+    let currentValue = '';
+    let currentRow = [];
+    let inQuotes = false;
+
+    for (let i = 0; i < csvText.length; i++) {
+        const char = csvText[i];
+        const nextChar = csvText[i + 1];
+
+        if (char === '"') {
+            if (inQuotes && nextChar === '"') {
+                currentValue += '"';
+                i++;
+            } else {
+                inQuotes = !inQuotes;
+            }
+        } else if (char === delimiter && !inQuotes) {
+            currentRow.push(currentValue.trim());
+            currentValue = '';
+        } else if ((char === '\n' || char === '\r') && !inQuotes) {
+            if (char === '\r' && nextChar === '\n') {
+                i++;
+            }
+
+            currentRow.push(currentValue.trim());
+            currentValue = '';
+
+            if (currentRow.some(value => value !== '')) {
+                rows.push(currentRow);
+            }
+            currentRow = [];
+        } else {
+            currentValue += char;
+        }
+    }
+
+    currentRow.push(currentValue.trim());
+    if (currentRow.some(value => value !== '')) {
+        rows.push(currentRow);
+    }
+
+    return rows;
+}
+
 function parseQuestionsCsv(csvText) {
     const delimiter = detectCsvDelimiter(csvText);
-    const lines = csvText
-        .split(/\r?\n/)
-        .map(line => line.trim())
-        .filter(Boolean);
+    const rows = parseCsvRows(csvText, delimiter);
 
-    if (lines.length < 2) {
+    if (rows.length < 2) {
         throw new Error('CSV inválido: inclua cabeçalho e pelo menos uma pergunta.');
     }
 
-    const headers = parseCsvLine(lines[0], delimiter).map(header => header.toLowerCase());
+    const headers = rows[0].map(header => header.toLowerCase());
     const expectedHeaders = [
         'level',
         'question',
@@ -148,8 +190,7 @@ function parseQuestionsCsv(csvText) {
     }
 
     const indexByHeader = Object.fromEntries(headers.map((header, idx) => [header, idx]));
-    const questions = lines.slice(1).map((line, rowIndex) => {
-        const columns = parseCsvLine(line, delimiter);
+    const questions = rows.slice(1).map((columns, rowIndex) => {
         const getValue = (header) => columns[indexByHeader[header]] || '';
         const correctOption = Number(getValue('correctoption'));
 
